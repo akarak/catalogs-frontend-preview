@@ -75,17 +75,17 @@
           <div class="self-start w-4/10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <img
-                class="h-auto max-w-full"
+                class="h-auto max-w-full drop-shadow-image-xs"
                 src="assets\covers\K1859.jpg"
                 alt="K1859. Осенняя выставка картин"
               />
               <img
-                class="h-auto max-w-full"
+                class="h-auto max-w-full drop-shadow-image-xs"
                 src="assets\covers\K1859.jpg"
                 alt="K1859. Осенняя выставка картин"
               />
               <img
-                class="h-auto max-w-full"
+                class="h-auto max-w-full drop-shadow-image-xs"
                 src="assets\covers\K1859.jpg"
                 alt="K1859. Осенняя выставка картин"
               />
@@ -97,7 +97,7 @@
               <span class="text-2xl">Мир искусства: Выставка картин</span>
               <span
                 >Мир искусства: Выставка картин: Каталог. СПб., 1912. 30, [2] с.
-                18,5 х 12,5. 20 к</span
+                18,5 × 12,5. 20 к</span
               >
               <span class="italic">Издательская иллюстрированная обложка.</span>
               <p>
@@ -105,12 +105,12 @@
                 Участвовало 56 художников. Экспонировано 451 произведение.
                 Впервые приняли участие Н. Калмаков и М. Шагал. Ретроспектива
                 выставки М. К. Чюрлёниса (1875-1911; до 1955 использовалась
-                русская форма имени Николай К. Чурлянис)
+                русская форма имени Николай К. Чурлянис).
               </p>
               <hr class="h-0.5 bg-white/30 border-0" />
               <span
                 >Мир искусства: Выставка картин: Каталог. 2-е изд. СПб., 1912.
-                31, [1] с. 18,5 х 12,5. 20 к.</span
+                31, [1] с. 18,5 × 12,5. 20 к.</span
               >
               <span class="italic"
                 >Издательская иллюстрированная обложка с серебряным
@@ -121,7 +121,7 @@
                 16-18, 58, 61-65, 213-216, 246, 255-259, 263, 282, 284-285, 292,
                 332. Добавлены № 168а, 224а, 260а, 302а, 329а, 338а (М. Шагал,
                 которого не было среди участников в первом издании), 386а.
-                Изменился список работ М. Чюрлёниса, а также их нумерация
+                Изменился список работ М. Чюрлёниса, а также их нумерация.
               </p>
               <hr class="h-0.5 bg-white/30 border-0" />
               <p>Третье издание идентично второму.</p>
@@ -130,18 +130,22 @@
         </div>
       </section>
 
+      <hr class="h-[0.5px] mb-6 bg-white border-0" />
+
       <section class="flex text-white font-cambria">
-        <hr class="h-[0.5px] mb-6 bg-white border-0" />
         <div class="catalog-container">
-            <div class="items-center justify-items-center overflow-hidden" id="imageContainer">
-                <!-- Изображения будут добавлены динамически -->
-            </div>
-            <div class="click-layer" id="clickLayer">
-                <div class="click-zone left" data-direction="left"></div>
-                <div class="click-zone right" data-direction="right"></div>
-            </div>
-            <div class="loader" id="loader"></div>
-            <div class="counter" id="counter">? из ??</div>
+          <div
+            class="items-center justify-items-center overflow-hidden"
+            id="imageContainer"
+          >
+            <!-- Изображения будут добавлены динамически -->
+          </div>
+          <div class="click-layer" id="clickLayer">
+            <div class="click-zone left" data-direction="left"></div>
+            <div class="click-zone right" data-direction="right"></div>
+          </div>
+          <div class="loader" id="loader"></div>
+          <div class="counter" id="counter">? из ??</div>
         </div>
       </section>
     </main>

@@ -58,16 +58,20 @@ document.addEventListener("DOMContentLoaded", function () {
         reject(new Error("Failed to load image"));
       };
       img.src = url;
-      img.className = "image";
-      img.style.visibility = "hidden"; // Сразу скрываем загружаемые изображения
+      // ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ С ИСПОЛЬЗОВАНИЕМ TAILWIND
+      img.className =
+        "image absolute max-w-[90vw] max-h-[70vh] w-auto h-auto object-contain transition-transform duration-100 ease-out pointer-events-none z-0";
+      img.style.opacity = "0";
     });
   }
 
   // Функция для создания элемента изображения
   function createImageElement() {
     const img = document.createElement("img");
-    img.className = "image";
-    img.style.visibility = "hidden"; // Новые элементы создаются скрытыми
+    // ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ С ИСПОЛЬЗОВАНИЕМ TAILWIND
+    img.className =
+      "image absolute max-w-[90vw] max-h-[70vh] w-auto h-auto object-contain transition-transform duration-100 ease-out pointer-events-none z-0";
+    img.style.opacity = "0";
     return img;
   }
 
@@ -87,18 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для установки активного изображения
   function setActiveImage(index) {
-    // Скрываем все изображения
+    // Скрываем все изображения через opacity
     images.forEach((img) => {
-      img.classList.remove("active", "next");
-      img.style.display = "none";
-      img.style.visibility = "hidden"; // Скрываем visibility
+      img.classList.remove("active", "next", "animating");
+      img.style.opacity = "0";
+      // Сбрасываем позицию
+      img.style.transform = "translateX(0) scale(1) rotate(0deg)";
+      // Сбрасываем z-index к базовому
+      img.classList.remove("z-10", "z-20", "z-30");
+      img.classList.add("z-0");
     });
 
     // Показываем активное изображение
     if (images[index]) {
       images[index].classList.add("active");
-      images[index].style.display = "block";
-      images[index].style.visibility = "visible"; // Делаем видимым
+      images[index].style.opacity = "1";
+      // Устанавливаем z-index для активного изображения
+      images[index].classList.remove("z-0");
+      images[index].classList.add("z-10");
     }
 
     updateShadow();
@@ -176,7 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
         : (currentRelativeIndex - i + TOTAL_IMAGES) % TOTAL_IMAGES;
 
       // Проверяем, что изображение еще не было загружено
-      if (!images[relativeIndex].src || images[relativeIndex].src === "") {
+      if (
+        !images[relativeIndex] ||
+        !images[relativeIndex].src ||
+        images[relativeIndex].src === ""
+      ) {
         indicesToLoad.add(relativeIndex);
       }
     }
@@ -220,11 +234,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Запускаем асинхронную загрузку следующих/предыдущих изображений
     loadAdjacentImages(newIndex, isRightClick);
 
-    // 1. Сначала показываем следующее изображение под текущим (прозрачное, но с тенью)
-    nextImage.classList.add("next");
-    nextImage.style.display = "block";
-    nextImage.style.visibility = "visible"; // Делаем видимым
-    nextImage.classList.add("with-shadow"); // Сразу добавляем тень
+    // Устанавливаем высокий z-index для обоих анимируемых изображений
+    currentImage.classList.remove("z-0", "z-10");
+    currentImage.classList.add("z-30", "animating");
+
+    nextImage.classList.remove("z-0");
+    nextImage.classList.add("z-20", "next", "animating", "with-shadow");
 
     // Настраиваем начальное состояние для следующего изображения - прозрачное
     gsap.set(nextImage, {
@@ -233,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 2. Запускаем анимацию появления следующего изображения (фейд за 0.3 секунды)
     const nextImageAnimation = gsap.to(nextImage, {
-      duration: 0.3,
+      duration: 0.2,
       opacity: 1,
       onComplete: () => {
         // После появления следующего изображения запускаем анимацию ухода текущего
@@ -254,9 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nextImage,
     newIndex
   ) {
-    // Добавляем класс анимации к текущему изображению
-    currentImage.classList.add("animating");
-
     // Определяем параметры анимации в зависимости от направления
     let shiftX, rotation, transformOrigin;
 
@@ -301,6 +313,9 @@ document.addEventListener("DOMContentLoaded", function () {
           transformOrigin: "center center",
         });
         currentImage.classList.remove("animating");
+        // Возвращаем базовый z-index
+        currentImage.classList.remove("z-30");
+        currentImage.classList.add("z-0");
 
         // Загружаем следующие изображения для плавности
         // Загружаем только в направлении нажатия
@@ -329,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для загрузки начального изображения
   async function loadInitialImage() {
-    loader.style.display = "block";
+    loader.classList.remove("hidden");
 
     try {
       const firstImageUrl = getImageUrl(getAbsoluteIndex(0));
@@ -339,9 +354,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const oldElement = images[0];
       imageContainer.replaceChild(loadedImage, oldElement);
       images[0] = loadedImage;
-
-      // Делаем первое изображение видимым
-      loadedImage.style.visibility = "visible";
 
       // Устанавливаем активное изображение
       setActiveImage(0);
@@ -353,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.error("Ошибка загрузки начального изображения:", error);
     } finally {
-      loader.style.display = "none";
+      loader.classList.add("hidden");
     }
   }
 
@@ -361,7 +373,11 @@ document.addEventListener("DOMContentLoaded", function () {
   async function preloadImage(relativeIndex) {
     if (relativeIndex < 0 || relativeIndex >= TOTAL_IMAGES) return;
 
-    if (!images[relativeIndex].src || images[relativeIndex].src === "") {
+    if (
+      !images[relativeIndex] ||
+      !images[relativeIndex].src ||
+      images[relativeIndex].src === ""
+    ) {
       try {
         const imageUrl = getImageUrl(getAbsoluteIndex(relativeIndex));
         const loadedImage = await loadImage(imageUrl);
@@ -371,10 +387,11 @@ document.addEventListener("DOMContentLoaded", function () {
         imageContainer.replaceChild(loadedImage, oldElement);
         images[relativeIndex] = loadedImage;
 
-        // Сохраняем классы и стили, включая visibility: hidden
+        // Сохраняем классы
         loadedImage.className = oldElement.className;
-        loadedImage.style.display = oldElement.style.display;
-        loadedImage.style.visibility = "hidden"; // Сохраняем скрытое состояние
+        loadedImage.classList.value = oldElement.classList.value;
+        // Сохраняем opacity
+        loadedImage.style.opacity = oldElement.style.opacity;
       } catch (error) {
         console.warn(
           "Не удалось загрузить изображение",
@@ -399,15 +416,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Проверяем, загружено ли следующее изображение
     const nextImage = images[newIndex];
-    if (!nextImage.src || nextImage.src === "") {
+    if (!nextImage || !nextImage.src || nextImage.src === "") {
       // Показываем индикатор загрузки
-      loader.style.display = "block";
+      loader.classList.remove("hidden");
 
       // Ждем загрузки изображения
       await preloadImage(newIndex);
 
       // Скрываем индикатор загрузки
-      loader.style.display = "none";
+      loader.classList.add("hidden");
     }
 
     // Запускаем анимацию перехода
@@ -426,7 +443,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Обработчик нажатия клавиш на клавиатуре
-  document.addEventListener("keydown", function (e) {
+  clickLayer.addEventListener("keydown", function (e) {
+    console.log(e.target.id);
+
     // Стрелка влево - предыдущее изображение
     if (e.key === "ArrowLeft") {
       e.preventDefault(); // Предотвращаем прокрутку страницы
