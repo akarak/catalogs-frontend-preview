@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Базовый путь к изображениям
   const basePath =
-    "https://raw.githubusercontent.com/akarak/catalogs/refs/heads/main/src/assets/data/K3519/pages";
+    "https://raw.githubusercontent.com/akarak/catalogs/refs/heads/gh-pages/assets/data/K3519/pages";
 
   // Константы для генерации имен изображений
   const FIRST_INDEX = 1;
