@@ -3,458 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="mx-auto grid gap-6 p-6 max-w-[1000px]">
-      <section class="flow-root">
-        <a href="index.html" class="float-left">
-          <p
-            class="text-md pr-4 font-semibold leading-4.5 uppercase text-black"
+    <main class="overflow-hidden">
+      <section class="mx-auto grid gap-6 p-6 max-w-[1000px]">
+        <section class="flow-root">
+          <a href="index.html" class="float-left">
+            <p
+              class="text-md pr-4 font-semibold leading-4.5 uppercase text-black"
+            >
+              Сборник каталогов
+              <br />художественных<br />выставок
+            </p>
+            <hr class="h-0.5 my-3 bg-black border-0" />
+          </a>
+          <a href="index.html" class="float-left">
+            <p class="text-md font-semibold leading-4.5 uppercase text-white">
+              The collection of catalogs
+              <br />artistic exhibitions<br />Russia-USSR XIX-XX century
+            </p>
+            <hr class="h-0.5 my-3 bg-white border-0" />
+          </a>
+          <div
+            class="py-1 px-3 text-sm border text-white border-white rounded-2xl float-right"
           >
-            Сборник каталогов
-            <br />художественных<br />выставок
-          </p>
-          <hr class="h-0.5 my-3 bg-black border-0" />
-        </a>
-        <a href="index.html" class="float-left">
-          <p class="text-md font-semibold leading-4.5 uppercase text-white">
-            The collection of catalogs
-            <br />artistic exhibitions<br />Russia-USSR XIX-XX century
-          </p>
-          <hr class="h-0.5 my-3 bg-white border-0" />
-        </a>
-        <div
-          class="py-1 px-3 text-sm border text-white border-white rounded-2xl float-right"
-        >
-          Личный кабинет
-        </div>
+            Личный кабинет
+          </div>
+        </section>
+        <section>
+          <form id="search-form">
+            <div class="relative">
+              <input
+                type="search"
+                id="search-text"
+                class="block w-full py-2 pl-4 pr-10 text-md bg-white rounded-2xl placeholder:truncate focus:outline-none"
+                placeholder="Поиск выставок, художников, картин, мест проведения"
+                required
+              />
+              <button
+                type="submit"
+                id="search-submit"
+                class="absolute end-2.5 bottom-2.5 px-4 py-2.5"
+              >
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </form>
+        </section>
+        <section class="flex flex-col text-white font-cambria">
+          <div class="flex gap-4">
+            <div class="self-start w-4/10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <img
+                  class="h-auto max-w-full drop-shadow-image-xs"
+                  src="assets\covers\K1859.jpg"
+                  alt="K1859. Осенняя выставка картин"
+                />
+                <img
+                  class="h-auto max-w-full drop-shadow-image-xs"
+                  src="assets\covers\K1859.jpg"
+                  alt="K1859. Осенняя выставка картин"
+                />
+                <img
+                  class="h-auto max-w-full drop-shadow-image-xs"
+                  src="assets\covers\K1859.jpg"
+                  alt="K1859. Осенняя выставка картин"
+                />
+              </div>
+            </div>
+            <div class="w-6/10">
+              <div class="flex flex-col gap-3">
+                <span>125</span>
+                <span class="text-2xl">Мир искусства: Выставка картин</span>
+                <span
+                  >Мир искусства: Выставка картин: Каталог. СПб., 1912. 30, [2]
+                  с. 18,5 × 12,5. 20 к</span
+                >
+                <span class="italic"
+                  >Издательская иллюстрированная обложка.</span
+                >
+                <p>
+                  Проходила в январе в Петербурге, на Невском проспекте, 45.
+                  Участвовало 56 художников. Экспонировано 451 произведение.
+                  Впервые приняли участие Н. Калмаков и М. Шагал. Ретроспектива
+                  выставки М. К. Чюрлёниса (1875-1911; до 1955 использовалась
+                  русская форма имени Николай К. Чурлянис).
+                </p>
+                <hr class="h-0.5 bg-white/30 border-0" />
+                <span
+                  >Мир искусства: Выставка картин: Каталог. 2-е изд. СПб., 1912.
+                  31, [1] с. 18,5 × 12,5. 20 к.</span
+                >
+                <span class="italic"
+                  >Издательская иллюстрированная обложка с серебряным
+                  тиснением.</span
+                >
+                <p>
+                  Вышло три издания каталога. Во втором издании каталога изъяты
+                  № 16-18, 58, 61-65, 213-216, 246, 255-259, 263, 282, 284-285,
+                  292, 332. Добавлены № 168а, 224а, 260а, 302а, 329а, 338а (М.
+                  Шагал, которого не было среди участников в первом издании),
+                  386а. Изменился список работ М. Чюрлёниса, а также их
+                  нумерация.
+                </p>
+                <hr class="h-0.5 bg-white/30 border-0" />
+                <p>Третье издание идентично второму.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="h-[0.5px] bg-white border-0" />
       </section>
-      <section>
-        <form id="search-form">
-          <div class="relative">
-            <input
-              type="search"
-              id="search-text"
-              class="block w-full py-2 pl-4 pr-10 text-md bg-white rounded-2xl placeholder:truncate focus:outline-none"
-              placeholder="Поиск выставок, художников, картин, мест проведения"
-              required
-            />
-            <button
-              type="submit"
-              id="search-submit"
-              class="absolute end-2.5 bottom-2.5 px-4 py-2.5"
+
+      <section class="mx-auto grid gap-6 max-w-[1100px]">
+        <section
+          class="flex flex-col flex-1 select-none touch-callout-none tap-highlight-transparent"
+        >
+          <div
+            id="imagesSection"
+            class="relative flex flex-col items-center justify-center bg-gray-200/00"
+          >
+            <div
+              id="imageContainer"
+              class="flex flex-col items-center justify-center pointer-events-none bg-yellow-200/0"
+            >
+              <!-- Изображения будут добавлены динамически -->
+            </div>
+
+            <div
+              id="loader"
+              class="absolute w-12 h-12 border-4 border-gray-400 rounded-full border-t-gray-200 animate-spin z-40 hidden"
+            ></div>
+
+            <div
+              id="clickLayer"
+              class="absolute w-full h-full flex z-50"
+              tabindex="-1"
             >
               <div
-                class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none"
-              >
-                <svg
-                  class="w-5 h-5 text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
-            </button>
-          </div>
-        </form>
-      </section>
-      <section class="flex flex-col text-white font-cambria">
-        <div class="flex gap-4">
-          <div class="self-start w-4/10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <img
-                class="h-auto max-w-full"
-                src="assets\covers\K1859.jpg"
-                alt="K1859. Осенняя выставка картин"
-              />
-              <img
-                class="h-auto max-w-full"
-                src="assets\covers\K1859.jpg"
-                alt="K1859. Осенняя выставка картин"
-              />
-              <img
-                class="h-auto max-w-full"
-                src="assets\covers\K1859.jpg"
-                alt="K1859. Осенняя выставка картин"
-              />
+                class="w-1/2 left-0 cursor-pointer bg-red-500/00"
+                data-direction="left"
+              ></div>
+              <div
+                class="w-1/2 right-0 cursor-pointer bg-green-500/00"
+                data-direction="right"
+              ></div>
             </div>
           </div>
-          <div class="w-6/10">
-            <div class="flex flex-col gap-3">
-              <span>125</span>
-              <span class="text-2xl">Мир искусства: Выставка картин</span>
-              <span
-                >Мир искусства: Выставка картин: Каталог. СПб., 1912. 30, [2] с.
-                18,5 х 12,5. 20 к</span
-              >
-              <span class="italic">Издательская иллюстрированная обложка.</span>
-              <p>
-                Проходила в январе в Петербурге, на Невском проспекте, 45.
-                Участвовало 56 художников. Экспонировано 451 произведение.
-                Впервые приняли участие Н. Калмаков и М. Шагал. Ретроспектива
-                выставки М. К. Чюрлёниса (1875-1911; до 1955 использовалась
-                русская форма имени Николай К. Чурлянис)
-              </p>
-              <hr class="h-0.5 bg-white/30 border-0" />
-              <span
-                >Мир искусства: Выставка картин: Каталог. 2-е изд. СПб., 1912.
-                31, [1] с. 18,5 х 12,5. 20 к.</span
-              >
-              <span class="italic"
-                >Издательская иллюстрированная обложка с серебряным
-                тиснением.</span
-              >
-              <p>
-                Вышло три издания каталога. Во втором издании каталога изъяты №
-                16-18, 58, 61-65, 213-216, 246, 255-259, 263, 282, 284-285, 292,
-                332. Добавлены № 168а, 224а, 260а, 302а, 329а, 338а (М. Шагал,
-                которого не было среди участников в первом издании), 386а.
-                Изменился список работ М. Чюрлёниса, а также их нумерация
-              </p>
-              <hr class="h-0.5 bg-white/30 border-0" />
-              <p>Третье издание идентично второму.</p>
-            </div>
+
+          <div class="py-4 flex items-center justify-center">
+            <p
+              id="counter"
+              class="text-white text-lg font-cambria bg-black/50 px-4 py-2 rounded-full"
+            >
+              1 из 77
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section class="">
-        <hr class="h-[0.5px] mb-6 bg-white border-0" />
-        <div class="md:columns-4 columns-3 text-white text-sm font-cambria">
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Афанасьев А. Ф.</lh>
-            <li>1. Толпа.</li>
-            <li>2. Дядюшка Яков (эскиз).</li>
-            <li>3. Старуха.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Богаевский К. Ф.</lh>
-            <li>4. Облако.</li>
-            <li>5. Сумерки в долине.</li>
-            <li>6. Утро.</li>
-            <li>7. Подражание Мантенье (эскиз картины).</li>
-            <li>8. Итальянский пейзаж,эскиз.</li>
-            <li>9. Воспоминание об Италии, эскиз.</li>
-            <li>10. Акварель.</li>
-            <li>11. Акварель.</li>
-            <li>12. Киммерийская область (эскиз).</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Болдырев H. Н.</lh>
-            <li>13. Ф. Ф. Неймирок, пастель.</li>
-            <li>14. Вечерняя тишина.</li>
-            <li>15. Белые думы.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Борисов-Мусатов В. Э.</lh>
-            <li>16. Одиночество (эскиз, пастель).</li>
-            <li>17. Встреча у колонны (набросок).</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Браиловская P. Н.</lh>
-            <li>18. Пир.</li>
-            <li>19. С маскарада.</li>
-            <li>20. В поход.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Браиловский А. М.</lh>
-            <li>21. Легенда о короле.</li>
-            <li>22. Праздник.</li>
-            <li>23. Из Виктора Гюго.</li>
-            <li>24. Декоративная фантазия.</li>
-            <li>25. Призраки.</li>
-            <li>26. Маскарад фантош.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Верховская Л. Н.</lh>
-            <li>27. Аллея.</li>
-            <li>28. Этюд.</li>
-            <li>29. Площадка.</li>
-            <li>30. Рисунок.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Визель Э. О.</lh>
-            <li>31. Вечер.</li>
-            <li>32. Canal Grande.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Виллиам Е. Н.</lh>
-            <li>33. Фрагмент (головка).</li>
-            <li>34. Букет сирени.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Глаголева А. С.</lh>
-            <li>35. Июнь.</li>
-            <li>36. Пейзаж.</li>
-            <li>37. В старом парке.</li>
-            <li>38. Осень.</li>
-            <li>39. Двойной портрет.</li>
-            <li>40. Портрет мальчика.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Гаврилко В. А.</lh>
-            <li>41. Окно.</li>
-            <li>42. Nature morte.</li>
-            <li>43. Сена.</li>
-            <li>44. Nature morte.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Голощапов H. H.</lh>
-            <li>45. Пейзаж.</li>
-            <li>46. Пейзаж.</li>
-            <li>47. Вечер на берегу пруда.</li>
-            <li>48. Ворота в парк.</li>
-            <li>49. Эскиз.</li>
-            <li>50. Эскиз.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Гольдингер Е.</lh>
-            <li>51. Портрет княжны М. Н. Щербатовой.</li>
-            <li>52. Лето.</li>
-            <li>53. Храмик.</li>
-            <li>54. Дом в Братцеве (закат).</li>
-            <li>55. Дом в Братцеве (утро).</li>
-            <li>56. Эскиз портрета.</li>
-            <li>57. Interieur.</li>
-            <li>58. Этюд.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Григорьев H. М.</lh>
-            <li>59. Яблоня.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Гугунава И. Г.</lh>
-            <li>60-65. Этюды.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Делла-Вас-Кардовсная О. Л.</lh>
-            <li>66. Павлов.</li>
-            <li>67. Вольер.</li>
-            <li>68. Дама в синем шарфе.</li>
-            <li>69. Брат и сестра.</li>
-            <li>70. Маска.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Детерс Э. В.</lh>
-            <li>71. В имении.</li>
-            <li>72. Этюд.</li>
-            <li>73. Розы.</li>
-            <li>74. Этюд.</li>
-            <li>75. Вышивка.</li>
-            <li>76-78. Этюды.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Добржинский В. А.</lh>
-            <li>79. Любенск (имение Н. А. Римского-Корсакова).</li>
-            <li>80. Мельница.</li>
-            <li>81-89. Этюды.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Дубах О.</lh>
-            <li>92. Белая ночь.</li>
-            <li>93. Этюд.</li>
-            <li>94. Эскиз (Лапландия).</li>
-            <li>95. Мартовский вечер.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Зак Л. В.</lh>
-            <li>96. Дама и фрукты.</li>
-            <li>97. Богини в мехах.</li>
-            <li>98. Дама у фонаря.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Замирайло В. Д.</lh>
-            <li>99-102. Рисунки.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Иванов А. Г.</lh>
-            <li>103. Лунная ночь.</li>
-            <li>104. Сумерки.</li>
-            <li>105. На реке.</li>
-            <li>106. Венеция.</li>
-            <li>107. Прибой.</li>
-            <li>108. Рисунки.</li>
-            <li>109. Рисунки.</li>
-            <li>110-114. Эскизы.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Ивашинцева М. И.</lh>
-            <li>115. Часы.</li>
-            <li>116. Портрет Б. П. Брюллова.</li>
-            <li>117. Старый портрет.</li>
-            <li>118. Окно.</li>
-            <li>119. Киот.</li>
-            <li>120. Цветы.</li>
-            <li>121. Васильки.</li>
-            <li>122. Цветы.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Ильин Л. А.</lh>
-            <li>123. Дом в Тамбовской губ. Проект реставрации. Гостиная.</li>
-            <li>124. Проект столовой.</li>
-            <li>125. Дом в Тамбовской губ. Проект реставрации.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Каменцева Е. И.</lh>
-            <li>126. Портрет О. Ф. Г.</li>
-            <li>127. Этюд.</li>
-            <li>128. Петунии.</li>
-            <li>129. Этюд.</li>
-            <li>130. Портрет.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кардовский Д. Н.</lh>
-            <li>131. На валу.</li>
-            <li>132. Уездный городок.</li>
-            <li>133. Voloska—Abazia.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Келина Е. А.</lh>
-            <li>134. Комната.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Киселева Е. А.</lh>
-            <li>135. В саду.</li>
-            <li>136. Из окна.</li>
-            <li>137. Розовый зонтин.</li>
-            <li>138. Зеленая ваза.</li>
-            <li>139. Модель.</li>
-            <li>140. Осенний мотив.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кончаловский П. П.</lh>
-            <li>141. Nemours (Франция).</li>
-            <li>142. Пейзаж в Испании.</li>
-            <li>143. Этюд.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кресанов В. Н.</lh>
-            <li>144. Судак, этюд.</li>
-            <li>145. Этюд.</li>
-            <li>146. Му boy’s garden.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кржижановский К. М.</lh>
-            <li>147. Портрет Г-жи Г.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кругликова Е. С.</lh>
-            <li>148. Портрет моего отца.</li>
-            <li>149. Портрет матери.</li>
-            <li>150. Чернышев мост.</li>
-            <li>151. Фонтанка.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Кузнецов П.</lh>
-            <ul class="list-none">
-              <lh>Работы для фресок:</lh>
-              <li>152. Портрет женщины (для фресок).</li>
-              <li>153. Купальщица (эскиз).</li>
-              <li>154. Рождение нимфей (эскиз).</li>
-              <li>155. Утро (эскиз).</li>
-              <li>156. Сон.</li>
-              <li>157. Рождение нимфей (эскиз).</li>
-              <li>158. Синие баклажаны.</li>
-              <li>159. Цветы.</li>
-              <li>160. Женщина с собаками.</li>
-              <li>161. Рыбы.</li>
-              <li>162. Часть альфреско (этюд).</li>
-              <li>163. Часть альфреско (этюд).</li>
-            </ul>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Лассон-Спирова Э.А.</lh>
-            <li>164. Сирень.</li>
-            <li>165. Букет.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Лукомский Г. К.</lh>
-            <li>
-              166. Из серии «Памятники провинциальной архитектуры XVII
-              столетия». Чернигов. «Дом Мазепы».
-            </li>
-            <li>
-              167. Козелец (у. г. Черниговской губ.). Дом быв. Магистрата.
-            </li>
-            <li>168. Польский помещичий дом (композитный рисунок).</li>
-            <li>
-              169. Из серии «Ампирные домики». Петербург. В усадьбе гр.
-              Бобринского.
-            </li>
-            <li>170 Чернигов. Дом Чарнецкаго.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Любавина Н. И.</lh>
-            <li>171. Букет.</li>
-            <li>172. Пейзаж.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Машков И.</lh>
-            <li>173-175. Nature Morte.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Масютин В. Н.</lh>
-            <li>176. Униженность. Офорт.</li>
-            <li>177. Портрет художника В. В. P. Офорт.</li>
-          </ul>
-
-          <ul class="list-none pb-4">
-            <lh class="font-semibold">Манганари А. В.</lh>
-            <li>178. Великий Новгород (серия). Перунов остров:</li>
-            <li>Вариант (а).</li>
-            <li>Вариант (b).</li>
-            <li>Вариант (с).</li>
-            <li>179. Вид с колокольни Юрьева монастыря (север):</li>
-            <li>Вариант (а).</li>
-          </ul>
-        </div>
+        </section>
       </section>
     </main>
 
@@ -474,5 +200,6 @@
           });
       });
     </script>
+    <script src="./catalog.js" />
   </body>
 </html>
