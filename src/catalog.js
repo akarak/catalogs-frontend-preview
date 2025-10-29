@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let images = []; // Массив для хранения загруженных изображений
   let isLoading = false;
   let currentAnimation = null; // Текущая анимация GSAP
-  let zoomLevels = new Map(); // Хранит информацию о масштабе для каждого изображения
-  let naturalSizes = new Map(); // Хранит натуральные размеры изображений
 
   // Функция для преобразования относительного индекса в абсолютный
   function getAbsoluteIndex(relativeIndex) {
@@ -44,13 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.onload = () => {
-        // Сохраняем натуральные размеры изображения
-        naturalSizes.set(img, {
-          width: img.naturalWidth,
-          height: img.naturalHeight,
-        });
-        // Инициализируем уровень зума для этого изображения
-        zoomLevels.set(img, 1);
         resolve(img);
       };
       img.onerror = () => {
@@ -58,42 +49,23 @@ document.addEventListener("DOMContentLoaded", function () {
         reject(new Error("Failed to load image"));
       };
       img.src = url;
-      // ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ С ИСПОЛЬЗОВАНИЕМ TAILWIND
-      img.className =
-        "image absolute max-w-[90vw] max-h-[70vh] w-auto h-auto object-contain transition-transform duration-100 ease-out pointer-events-none z-0";
-      img.style.opacity = "0";
+      img.classList.add("drop-shadow-image-md");
     });
   }
 
   // Функция для создания элемента изображения
   function createImageElement() {
     const img = document.createElement("img");
-    // ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ С ИСПОЛЬЗОВАНИЕМ TAILWIND
-    img.className =
-      "image absolute max-w-[90vw] max-h-[70vh] w-auto h-auto object-contain transition-transform duration-100 ease-out pointer-events-none z-0";
+    img.className = "absolute drop-shadow-image-md z-0";
     img.style.opacity = "0";
     return img;
-  }
-
-  // Функция для обновления тени
-  function updateShadow() {
-    // Убираем тень со всех изображений
-    images.forEach((img) => {
-      img.classList.remove("with-shadow");
-    });
-
-    // Добавляем тень только к активному изображению
-    const activeImage = images[currentIndex];
-    if (activeImage) {
-      activeImage.classList.add("with-shadow");
-    }
   }
 
   // Функция для установки активного изображения
   function setActiveImage(index) {
     // Скрываем все изображения через opacity
     images.forEach((img) => {
-      img.classList.remove("active", "next", "animating");
+      img.classList.remove("active", "animating");
       img.style.opacity = "0";
       // Сбрасываем позицию
       img.style.transform = "translateX(0) scale(1) rotate(0deg)";
@@ -110,69 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
       images[index].classList.remove("z-0");
       images[index].classList.add("z-10");
     }
-
-    updateShadow();
-  }
-
-  // Функция для расчета максимального зума (до натурального размера)
-  function getMaxZoomLevel(image) {
-    const naturalSize = naturalSizes.get(image);
-    if (!naturalSize) return 3; // Возвращаем разумное значение по умолчанию
-
-    const containerWidth = imageContainer.clientWidth;
-    const containerHeight = imageContainer.clientHeight;
-
-    // Рассчитываем, во сколько раз натуральный размер больше контейнера
-    const widthRatio = naturalSize.width / containerWidth;
-    const heightRatio = naturalSize.height / containerHeight;
-
-    // Берем максимальное отношение, чтобы изображение полностью заполнило экран
-    const maxZoom = Math.max(widthRatio, heightRatio, 3);
-    return maxZoom;
-  }
-
-  // Функция для применения зума к изображению
-  function applyZoom(image, zoomLevel) {
-    const maxZoom = getMaxZoomLevel(image);
-    const clampedZoom = Math.max(1, Math.min(zoomLevel, maxZoom));
-
-    // Сохраняем текущий уровень зума
-    zoomLevels.set(image, clampedZoom);
-
-    // Применяем трансформацию
-    image.style.transform = `scale(${clampedZoom})`;
-
-    return clampedZoom;
-  }
-
-  // Функция для сброса зума
-  function resetZoom(image) {
-    zoomLevels.set(image, 1);
-    image.style.transform = "scale(1)";
-  }
-
-  // Функция для обработки колеса мыши
-  function handleWheel(event) {
-    if (isLoading) {
-      return; // Не обрабатываем зум во время анимации перехода
-    }
-
-    const activeImage = images[currentIndex];
-    if (!activeImage) {
-      return;
-    }
-
-    event.preventDefault();
-    event.stopPropagation();
-
-    const delta = -Math.sign(event.deltaY); // Инвертируем для интуитивного поведения
-    const currentZoom = zoomLevels.get(activeImage) || 1;
-    const zoomStep = 0.2; // Шаг изменения зума
-
-    let newZoom = currentZoom + delta * zoomStep;
-
-    // Применяем зум с ограничениями
-    applyZoom(activeImage, newZoom);
   }
 
   // Функция для асинхронной загрузки следующих/предыдущих изображений
@@ -228,9 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!currentImage || !nextImage) return;
 
-    // СБРАСЫВАЕМ ЗУМ перед анимацией перелистывания
-    resetZoom(currentImage);
-
     // Запускаем асинхронную загрузку следующих/предыдущих изображений
     loadAdjacentImages(newIndex, isRightClick);
 
@@ -239,14 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
     currentImage.classList.add("z-30", "animating");
 
     nextImage.classList.remove("z-0");
-    nextImage.classList.add("z-20", "next", "animating", "with-shadow");
+    nextImage.classList.add("z-20", "animating");
 
-    // Настраиваем начальное состояние для следующего изображения - прозрачное
-    gsap.set(nextImage, {
-      opacity: 0,
-    });
-
-    // 2. Запускаем анимацию появления следующего изображения (фейд за 0.3 секунды)
+    // Запускаем анимацию появления следующего изображения
     const nextImageAnimation = gsap.to(nextImage, {
       duration: 0.2,
       opacity: 1,
@@ -284,25 +185,20 @@ document.addEventListener("DOMContentLoaded", function () {
       transformOrigin = "left top";
     }
 
-    // Устанавливаем точку вращения
-    gsap.set(currentImage, { transformOrigin: transformOrigin });
-
     // Настраиваем параметры анимации для текущего изображения
     const animationParamsCurrent = {
-      duration: 0.4, // Общая длительность анимации 0.7 секунд (0.3 + 0.4)
+      duration: 0.4,
       ease: "power2.in", // Медленно в начале, быстро в конце
-      x: shiftX, // Сдвиг в сторону
-      scale: 0.7, // Уменьшение на 30% (100% - 30% = 70%)
-      rotation: rotation, // Поворот на 30 градусов
-      opacity: 0, // Полное исчезновение (начинается с начала)
+      transformOrigin: transformOrigin,
+      x: shiftX,
+      scale: 0.7,
+      rotation: rotation,
+      opacity: 0,
       onComplete: () => {
         // После завершения анимации устанавливаем новое активное изображение
         currentIndex = newIndex;
         setActiveImage(currentIndex);
         updateCounter();
-
-        isLoading = false;
-        currentAnimation = null;
 
         // Сбрасываем трансформации текущего изображения
         gsap.set(currentImage, {
@@ -317,8 +213,10 @@ document.addEventListener("DOMContentLoaded", function () {
         currentImage.classList.remove("z-30");
         currentImage.classList.add("z-0");
 
-        // Загружаем следующие изображения для плавности
-        // Загружаем только в направлении нажатия
+        isLoading = false;
+        currentAnimation = null;
+
+        // Загружаем следующие изображения в направлении нажатия
         loadAdjacentImages(currentIndex, isRightClick);
       },
     };
@@ -337,9 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       imageContainer.appendChild(img);
       images.push(img);
     }
-
-    // Загружаем и устанавливаем первое изображение
-    loadInitialImage();
   }
 
   // Функция для загрузки начального изображения
@@ -359,9 +254,8 @@ document.addEventListener("DOMContentLoaded", function () {
       setActiveImage(0);
       updateCounter();
 
-      // Загружаем соседние изображения (оба направления при инициализации)
-      loadAdjacentImages(0, true); // Загружаем следующие
-      loadAdjacentImages(0, false); // Загружаем предыдущие
+      // Загружаем соседние изображения
+      loadAdjacentImages(0, true);
     } catch (error) {
       console.error("Ошибка загрузки начального изображения:", error);
     } finally {
@@ -405,26 +299,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Основная функция для смены изображения
   async function changeImage(isRightClick) {
     // Если уже выполняется анимация, игнорируем новый клик
-    if (isLoading) {
-      return;
-    }
+    if (isLoading) return;
 
     // Определяем индекс следующего изображения
-    const newIndex = isRightClick
+    const nextIndex = isRightClick
       ? (currentIndex + 1) % TOTAL_IMAGES
       : (currentIndex - 1 + TOTAL_IMAGES) % TOTAL_IMAGES;
 
     // Проверяем, загружено ли следующее изображение
-    const nextImage = images[newIndex];
+    const nextImage = images[nextIndex];
     if (!nextImage || !nextImage.src || nextImage.src === "") {
-      // Показываем индикатор загрузки
-      loader.classList.remove("hidden");
-
-      // Ждем загрузки изображения
-      await preloadImage(newIndex);
-
-      // Скрываем индикатор загрузки
-      loader.classList.add("hidden");
+      try {
+        loader.classList.remove("hidden");
+        await preloadImage(nextIndex);
+      } finally {
+        loader.classList.add("hidden");
+      }
     }
 
     // Запускаем анимацию перехода
@@ -432,41 +322,35 @@ document.addEventListener("DOMContentLoaded", function () {
     performAnimation(isRightClick);
   }
 
-  // Обработчик клика на слой с зонами
+  // Обработчик клика по слою с зонами
   clickLayer.addEventListener("click", function (e) {
     const direction = e.target.getAttribute("data-direction");
+    // Правая зона - увеличиваем индекс (следующее изображение)
+    // Левая зона - уменьшаем индекс (предыдущее изображение)
     if (direction) {
-      // Правая зона - увеличиваем индекс (следующее изображение)
-      // Левая зона - уменьшаем индекс (предыдущее изображение)
       changeImage(direction === "right");
     }
   });
 
   // Обработчик нажатия клавиш на клавиатуре
+  // Стрелка влево - предыдущее изображение
+  // Стрелка вправо - следующее изображение
   clickLayer.addEventListener("keydown", function (e) {
-    console.log(e.target.id);
-
-    // Стрелка влево - предыдущее изображение
     if (e.key === "ArrowLeft") {
       e.preventDefault(); // Предотвращаем прокрутку страницы
       changeImage(false);
-    }
-    // Стрелка вправо - следующее изображение
-    else if (e.key === "ArrowRight") {
+    } else if (e.key === "ArrowRight") {
       e.preventDefault(); // Предотвращаем прокрутку страницы
       changeImage(true);
     }
   });
 
-  // Обработчик колеса мыши для зума
-  document.addEventListener("wheel", handleWheel, { passive: false });
-
   // Запрещаем контекстное меню (правый клик)
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-    return false;
-  });
+  //document.addEventListener("contextmenu", function (e) {
+  //  e.preventDefault();
+  //  return false;
+  //});
 
-  // Инициализируем изображения
   initializeImages();
+  loadInitialImage();
 });
