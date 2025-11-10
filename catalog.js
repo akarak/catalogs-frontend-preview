@@ -125,44 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Функция для анимированной смены изображения с GSAP
-  async function performAnimation(isRightClick) {
-    const oldIndex = currentIndex;
-    const newIndex = isRightClick
-      ? (currentIndex + 1) % TOTAL_IMAGES
-      : (currentIndex - 1 + TOTAL_IMAGES) % TOTAL_IMAGES;
-
-    const currentImage = images[oldIndex];
-    const nextImage = images[newIndex];
-
-    if (!currentImage || !nextImage) return;
-
-    // Запускаем асинхронную загрузку следующих/предыдущих изображений
-    loadAdjacentImages(newIndex, isRightClick);
-
-    // Устанавливаем высокий z-index для обоих анимируемых изображений
-    currentImage.classList.remove("z-0", "z-10");
-    currentImage.classList.add("z-30", "animating");
-
-    nextImage.classList.remove("z-0");
-    nextImage.classList.add("z-20", "animating");
-
-    // Запускаем анимацию появления следующего изображения
-    const nextImageAnimation = gsap.to(nextImage, {
-      duration: 0.2,
-      opacity: 1,
-      onComplete: () => {
-        // После появления следующего изображения запускаем анимацию ухода текущего
-        startCurrentImageAnimation(
-          isRightClick,
-          currentImage,
-          nextImage,
-          newIndex
-        );
-      },
-    });
-  }
-
   // Функция для анимации ухода текущего изображения
   function startCurrentImageAnimation(
     isRightClick,
@@ -296,22 +258,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Основная функция для смены изображения
-  async function changeImage(isRightClick) {
-    // Если уже выполняется анимация, игнорируем новый клик
+  // Основная функция для смены изображения по индексу
+  async function changeImageByIndex(targetIndex) {
+    // Если уже выполняется анимация, игнорируем новый запрос
     if (isLoading) return;
 
-    // Определяем индекс следующего изображения
-    const nextIndex = isRightClick
-      ? (currentIndex + 1) % TOTAL_IMAGES
-      : (currentIndex - 1 + TOTAL_IMAGES) % TOTAL_IMAGES;
+    // Нормализуем индекс в пределах допустимого диапазона
+    const normalizedIndex = (targetIndex + TOTAL_IMAGES) % TOTAL_IMAGES;
 
-    // Проверяем, загружено ли следующее изображение
-    const nextImage = images[nextIndex];
-    if (!nextImage || !nextImage.src || nextImage.src === "") {
+    // Если индекс не изменился, ничего не делаем
+    if (normalizedIndex === currentIndex) return;
+
+    // Определяем направление анимации
+    const isRightClick =
+      (normalizedIndex > currentIndex &&
+        normalizedIndex - currentIndex <= TOTAL_IMAGES / 2) ||
+      (normalizedIndex < currentIndex &&
+        currentIndex - normalizedIndex > TOTAL_IMAGES / 2);
+
+    // Проверяем, загружено ли целевое изображение
+    const targetImage = images[normalizedIndex];
+    if (!targetImage || !targetImage.src || targetImage.src === "") {
       try {
         loader.classList.remove("hidden");
-        await preloadImage(nextIndex);
+        await preloadImage(normalizedIndex);
       } finally {
         loader.classList.add("hidden");
       }
@@ -319,7 +289,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Запускаем анимацию перехода
     isLoading = true;
-    performAnimation(isRightClick);
+
+    const oldIndex = currentIndex;
+    const currentImage = images[oldIndex];
+    const nextImage = images[normalizedIndex];
+
+    if (!currentImage || !nextImage) {
+      isLoading = false;
+      return;
+    }
+
+    // Запускаем асинхронную загрузку соседних изображений
+    loadAdjacentImages(normalizedIndex, isRightClick);
+
+    // Устанавливаем высокий z-index для обоих анимируемых изображений
+    currentImage.classList.remove("z-0", "z-10");
+    currentImage.classList.add("z-30", "animating");
+
+    nextImage.classList.remove("z-0");
+    nextImage.classList.add("z-20", "animating");
+
+    // Запускаем анимацию появления следующего изображения
+    const nextImageAnimation = gsap.to(nextImage, {
+      duration: 0.2,
+      opacity: 1,
+      onComplete: () => {
+        // После появления следующего изображения запускаем анимацию ухода текущего
+        startCurrentImageAnimation(
+          isRightClick,
+          currentImage,
+          nextImage,
+          normalizedIndex
+        );
+      },
+    });
+  }
+
+  // Смена изображения по направлению (использует changeImageByIndex)
+  async function changeImageByDirection(isRightClick) {
+    const nextIndex = isRightClick
+      ? (currentIndex + 1) % TOTAL_IMAGES
+      : (currentIndex - 1 + TOTAL_IMAGES) % TOTAL_IMAGES;
+
+    changeImageByIndex(nextIndex);
   }
 
   // Обработчик клика по слою с зонами
@@ -328,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Правая зона - увеличиваем индекс (следующее изображение)
     // Левая зона - уменьшаем индекс (предыдущее изображение)
     if (direction) {
-      changeImage(direction === "right");
+      changeImageByDirection(direction === "right");
     }
   });
 
@@ -338,10 +350,10 @@ document.addEventListener("DOMContentLoaded", function () {
   clickLayer.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
       e.preventDefault(); // Предотвращаем прокрутку страницы
-      changeImage(false);
+      changeImageByDirection(false);
     } else if (e.key === "ArrowRight") {
       e.preventDefault(); // Предотвращаем прокрутку страницы
-      changeImage(true);
+      changeImageByDirection(true);
     }
   });
 
