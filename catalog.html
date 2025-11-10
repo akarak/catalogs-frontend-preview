@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="assets/scripts/gsap/3.12.2/gsap.min.js"></script>
     <link href="output.css" rel="stylesheet" />
-    <script src="catalog.js" type="text/javascript"></script>
     <script src="catalog-navigator.js" type="text/javascript"></script>
+    <script src="catalog-viewer.js" type="text/javascript"></script>
   </head>
   <body>
     <main class="overflow-hidden">
@@ -141,12 +141,12 @@
 
       <section class="mx-auto grid gap-6 px-6 py-2 max-w-[1000px]">
         <section class="relative">
-          <spreads-navigator
+          <catalog-spreads-navigator
             id="spreadsNavigatorComponent"
             image-src="https://raw.githubusercontent.com/akarak/catalogs/refs/heads/gh-pages/assets/data/K3519/stripes/K3519_0001_0077.jpg"
             total-spreads="77"
             class="h-[30px]"
-          ></spreads-navigator>
+          ></catalog-spreads-navigator>
 
           <div
             id="spreadTooltip"
@@ -163,43 +163,23 @@
         >
           <div
             id="imagesSection"
-            class="relative flex flex-col items-center justify-center bg-gray-200/00"
+            class="relative flex flex-col items-center justify-center bg-gray-200/0"
           >
-            <div
-              id="imageContainer"
-              class="flex flex-col items-center justify-center pointer-events-none bg-yellow-200/0"
-            >
-              <!-- Изображения будут добавлены динамически -->
+            <catalog-spreads-viewer
+              id="spreadsViewerComponent"
+              base-path="https://raw.githubusercontent.com/akarak/catalogs/refs/heads/gh-pages/assets/data/K3519/pages/K3519"
+              first-spread="1"
+              total-spreads="77"
+              class=""
+            ></catalog-spreads-viewer>
+            <div class="py-1 flex items-center justify-center z-50">
+              <p
+                id="spreadsViewerSpread"
+                class="text-white/90 text-lg font-cambria whitespace-nowrap"
+              >
+                1 из 77
+              </p>
             </div>
-
-            <div
-              id="loader"
-              class="absolute w-12 h-12 border-4 border-gray-400 rounded-full border-t-gray-200 animate-spin z-40 hidden"
-            ></div>
-
-            <div
-              id="clickLayer"
-              class="absolute w-full h-full flex z-50"
-              tabindex="-1"
-            >
-              <div
-                class="w-1/2 left-0 cursor-pointer bg-red-500/00"
-                data-direction="left"
-              ></div>
-              <div
-                class="w-1/2 right-0 cursor-pointer bg-green-500/00"
-                data-direction="right"
-              ></div>
-            </div>
-          </div>
-
-          <div class="py-1 flex items-center justify-center z-50">
-            <p
-              id="counter"
-              class="text-white/90 text-lg font-cambria whitespace-nowrap"
-            >
-              1 из 77
-            </p>
           </div>
         </section>
       </section>
@@ -220,14 +200,18 @@
             document.getElementById("search-submit").click();
           });
 
-        // Регистрируем web component
-        customElements.define("spreads-navigator", CatalogSpreadsNavigator);
-
-        const spreadsNavigator = document.getElementById("spreadsNavigatorComponent");
+        const spreadsNavigator = document.getElementById(
+          "spreadsNavigatorComponent"
+        );
         const spreadNumber = document.getElementById("spreadNumber");
 
+        const spreadsViewer = document.getElementById("spreadsViewerComponent");
+        const spreadsViewerSpread = document.getElementById(
+          "spreadsViewerSpread"
+        );
+
         spreadsNavigator.addEventListener("spread-click", (event) => {
-          changeImageByIndex(event.detail.spreadNumber - 1);
+          spreadsViewer.goTo(event.detail.spreadNumber);
         });
         spreadsNavigator.addEventListener("current-spread-change", (event) => {
           spreadNumber.textContent = event.detail.spreadNumber;
@@ -241,6 +225,11 @@
         spreadsNavigator.addEventListener("mouseleave", () => {
           spreadTooltip.classList.add("hidden");
         });
+
+        spreadsViewer.addEventListener("current-spread-change", (event) => {
+          spreadsViewerSpread.textContent = `${event.detail.spreadNumber} из ${spreadsViewer.totalSpreads}`;
+        });
+        console.log(spreadsViewer);
       });
     </script>
   </body>

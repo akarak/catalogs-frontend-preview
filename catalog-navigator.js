@@ -12,7 +12,6 @@ class CatalogSpreadsNavigator extends HTMLElement {
     this._componentClasses = "";
   }
 
-  // Свойство currentSpread
   get currentSpread() {
     return this._currentSpread;
   }
@@ -27,7 +26,6 @@ class CatalogSpreadsNavigator extends HTMLElement {
     );
   }
 
-  // Свойство imageSrc
   get imageSrc() {
     return this._imageSrc;
   }
@@ -38,7 +36,6 @@ class CatalogSpreadsNavigator extends HTMLElement {
     this.loadImageAsync();
   }
 
-  // Свойство totalSpreads
   get totalSpreads() {
     return this._totalSpreads;
   }
@@ -188,3 +185,5 @@ class CatalogSpreadsNavigator extends HTMLElement {
     tooltip.style.left = `${clampedX}px`;
   }
 }
+
+customElements.define("catalog-spreads-navigator", CatalogSpreadsNavigator);
