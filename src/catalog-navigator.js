@@ -185,3 +185,5 @@ class CatalogSpreadsNavigator extends HTMLElement {
     tooltip.style.left = `${clampedX}px`;
   }
 }
+
+customElements.define("catalog-spreads-navigator", CatalogSpreadsNavigator);
