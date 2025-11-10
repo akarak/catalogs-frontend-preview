@@ -10,6 +10,7 @@
     --color-red-100: oklch(93.6% 0.032 17.717);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -211,27 +212,6 @@
   .end-2\.5 {
     inset-inline-end: calc(var(--spacing) * 2.5);
   }
-  .-top-8 {
-    top: calc(var(--spacing) * -8);
-  }
-  .-top-10 {
-    top: calc(var(--spacing) * -10);
-  }
-  .top-8 {
-    top: calc(var(--spacing) * 8);
-  }
-  .top-10 {
-    top: calc(var(--spacing) * 10);
-  }
-  .top-12 {
-    top: calc(var(--spacing) * 12);
-  }
-  .top-14 {
-    top: calc(var(--spacing) * 14);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -262,14 +242,29 @@
   .z-50 {
     z-index: 50;
   }
-  .z-100 {
-    z-index: 100;
-  }
   .float-left {
     float: left;
   }
   .float-right {
     float: right;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
   }
   .mx-auto {
     margin-inline: auto;
@@ -325,18 +320,6 @@
   .h-\[30px\] {
     height: 30px;
   }
-  .h-\[40px\] {
-    height: 40px;
-  }
-  .h-\[50px\] {
-    height: 50px;
-  }
-  .h-\[150px\] {
-    height: 150px;
-  }
-  .h-\[300px\] {
-    height: 300px;
-  }
   .h-auto {
     height: auto;
   }
@@ -348,6 +331,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -367,14 +353,20 @@
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-\[800px\] {
-    width: 800px;
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
+  }
+  .w-60 {
+    width: calc(var(--spacing) * 60);
   }
   .w-\[900px\] {
     width: 900px;
-  }
-  .w-\[1000px\] {
-    width: 1000px;
   }
   .w-full {
     width: 100%;
@@ -448,9 +440,6 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -469,9 +458,6 @@
     border-style: var(--tw-border-style);
     border-width: 4px;
   }
-  .border-gray-200 {
-    border-color: var(--color-gray-200);
-  }
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
@@ -484,23 +470,41 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-black\/0 {
-    background-color: color-mix(in srgb, #000 0%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 0%, transparent);
-    }
-  }
-  .bg-black\/50 {
-    background-color: color-mix(in srgb, #000 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
-    }
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-gray-200\/0 {
+    background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 0%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-gray-200) 0%, transparent);
+    }
+  }
+  .bg-gray-200\/80 {
+    background-color: color-mix(in srgb, oklch(92.8% 0.006 264.531) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
+    }
+  }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+  .bg-green-500\/50 {
+    background-color: color-mix(in srgb, oklch(72.3% 0.219 149.579) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-green-500) 50%, transparent);
+    }
+  }
   .bg-red-100 {
     background-color: var(--color-red-100);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+  .bg-red-500\/50 {
+    background-color: color-mix(in srgb, oklch(63.7% 0.237 25.331) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+    }
   }
   .bg-white {
     background-color: var(--color-white);
@@ -520,11 +524,14 @@
       background-color: color-mix(in oklab, var(--color-yellow-200) 0%, transparent);
     }
   }
+  .bg-yellow-200\/50 {
+    background-color: color-mix(in srgb, oklch(94.5% 0.129 101.54) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-yellow-200) 50%, transparent);
+    }
+  }
   .object-fill {
     object-fit: fill;
-  }
-  .object-none {
-    object-fit: none;
   }
   .object-scale-down {
     object-fit: scale-down;
@@ -553,14 +560,8 @@
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
   .ps-2 {
     padding-inline-start: calc(var(--spacing) * 2);
-  }
-  .pt-1 {
-    padding-top: calc(var(--spacing) * 1);
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
@@ -573,12 +574,6 @@
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
-  }
-  .pb-2 {
-    padding-bottom: calc(var(--spacing) * 2);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -643,12 +638,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .text-white\/80 {
-    color: color-mix(in srgb, #fff 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-white) 80%, transparent);
-    }
   }
   .text-white\/90 {
     color: color-mix(in srgb, #fff 90%, transparent);
