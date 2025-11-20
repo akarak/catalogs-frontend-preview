@@ -1,6 +1,6 @@
 class CatalogSpreadsNavigator extends HTMLElement {
   static get observedAttributes() {
-    return ["current-spread", "image-src", "total-spreads"];
+    return ["image-src", "current-spread", "total-spreads"];
   }
 
   constructor() {
@@ -186,4 +186,6 @@ class CatalogSpreadsNavigator extends HTMLElement {
   }
 }
 
-customElements.define("catalog-spreads-navigator", CatalogSpreadsNavigator);
+if (!customElements.get("catalog-spreads-navigator")) {
+  customElements.define("catalog-spreads-navigator", CatalogSpreadsNavigator);
+}
