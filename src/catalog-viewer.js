@@ -1,6 +1,12 @@
+const ChangeImageAnimationDirection = {
+  Default: "Default",
+  Left: "Left",
+  Right: "Right",
+};
+
 class CatalogSpreadsViewer extends HTMLElement {
   static get observedAttributes() {
-    return ["current-spread", "base-path", "total-spreads", "first-spread"];
+    return ["base-path", "current-spread", "total-spreads", "first-spread"];
   }
 
   constructor() {
@@ -376,31 +382,32 @@ class CatalogSpreadsViewer extends HTMLElement {
   }
 
   // Основная функция для смены изображения по индексу
-  async changeImageByIndex(targetAbsoluteIndex) {
+  async changeImage(targetAbsoluteIndex, animationDirection) {
     if (this._isLoading || this.totalSpreads === 0) return;
 
-    // Преобразуем абсолютный индекс в относительный
-    const targetRelativeIndex = this.getRelativeIndex(targetAbsoluteIndex);
-    const normalizedRelativeIndex =
-      (targetRelativeIndex + this.totalSpreads) % this.totalSpreads;
-
-    // Получаем текущий относительный индекс
+    const targetRelativeIndex =
+      (this.getRelativeIndex(targetAbsoluteIndex) + this.totalSpreads) %
+      this.totalSpreads;
     const currentRelativeIndex = this.getRelativeIndex(this.currentSpread);
 
-    if (normalizedRelativeIndex === currentRelativeIndex) return;
+    if (targetRelativeIndex === currentRelativeIndex) return;
 
-    const isRightClick =
-      (normalizedRelativeIndex > currentRelativeIndex &&
-        normalizedRelativeIndex - currentRelativeIndex <=
-          this.totalSpreads / 2) ||
-      (normalizedRelativeIndex < currentRelativeIndex &&
-        currentRelativeIndex - normalizedRelativeIndex > this.totalSpreads / 2);
+    var isRightClick =
+      animationDirection === ChangeImageAnimationDirection.Right;
+    if (animationDirection === ChangeImageAnimationDirection.Default) {
+      isRightClick =
+        targetRelativeIndex > currentRelativeIndex &&
+        !(
+          targetRelativeIndex === 0 &&
+          currentRelativeIndex === this.totalSpreads - 1
+        );
+    }
 
-    const targetImage = this._images[normalizedRelativeIndex];
+    const targetImage = this._images[targetRelativeIndex];
     if (!targetImage?.src || targetImage.src === "") {
       try {
         this._loader.classList.remove("hidden");
-        await this.preloadImage(normalizedRelativeIndex);
+        await this.preloadImage(targetRelativeIndex);
       } finally {
         this._loader.classList.add("hidden");
       }
@@ -409,14 +416,14 @@ class CatalogSpreadsViewer extends HTMLElement {
     this._isLoading = true;
 
     const currentImage = this._images[currentRelativeIndex];
-    const nextImage = this._images[normalizedRelativeIndex];
+    const nextImage = this._images[targetRelativeIndex];
 
     if (!currentImage || !nextImage) {
       this._isLoading = false;
       return;
     }
 
-    this.loadAdjacentImages(normalizedRelativeIndex, isRightClick);
+    this.loadAdjacentImages(targetRelativeIndex, isRightClick);
 
     currentImage.classList.remove("z-0", "z-10");
     currentImage.classList.add("z-30", "animating");
@@ -432,10 +439,17 @@ class CatalogSpreadsViewer extends HTMLElement {
           isRightClick,
           currentImage,
           nextImage,
-          normalizedRelativeIndex
+          targetRelativeIndex
         );
       },
     });
+  }
+
+  async changeImageByIndex(targetAbsoluteIndex) {
+    return this.changeImage(
+      targetAbsoluteIndex,
+      ChangeImageAnimationDirection.Default
+    );
   }
 
   // Смена изображения по направлению
@@ -449,7 +463,12 @@ class CatalogSpreadsViewer extends HTMLElement {
 
     // Преобразуем относительный индекс обратно в абсолютный для вызова changeImageByIndex
     const nextAbsoluteIndex = this.getAbsoluteIndex(nextRelativeIndex);
-    this.changeImageByIndex(nextAbsoluteIndex);
+    this.changeImage(
+      nextAbsoluteIndex,
+      isRightClick
+        ? ChangeImageAnimationDirection.Right
+        : ChangeImageAnimationDirection.Left
+    );
   }
 
   // Публичные методы для управления компонентом
@@ -474,5 +493,6 @@ class CatalogSpreadsViewer extends HTMLElement {
   }
 }
 
-// Регистрируем компонент
-customElements.define("catalog-spreads-viewer", CatalogSpreadsViewer);
+if (!customElements.get("catalog-spreads-viewer")) {
+  customElements.define("catalog-spreads-viewer", CatalogSpreadsViewer);
+}
