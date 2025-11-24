@@ -1,7 +1,7 @@
 ### Редактирование
 
 ```` shell
-npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+npx @tailwindcss/cli -i ./src/styles/input.css -o ./src/styles/output.css --watch
 ````
 
 ```` shell
