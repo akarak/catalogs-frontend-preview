@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="assets/scripts/gsap/3.12.2/gsap.min.js"></script>
     <link href="output.css" rel="stylesheet" />
-    <script src="catalog-navigator.js" type="text/javascript"></script>
-    <script src="catalog-viewer.js" type="text/javascript"></script>
+    <script src="components/catalog-navigator.js" type="text/javascript"></script>
+    <script src="components/catalog-viewer.js" type="text/javascript"></script>
   </head>
   <body>
     <main class="overflow-hidden">
@@ -141,21 +141,20 @@
 
       <section class="mx-auto grid gap-6 px-6 py-2 max-w-[1000px]">
         <section class="relative">
+          <div
+            id="spreadTooltip"
+            class="absolute hidden whitespace-nowrap pointer-events-none z-50 top-0 -translate-y-full"
+          >
+            <span id="spreadNumber" class="text-white/90 font-cambria text-lg"
+              >0</span
+            >
+          </div>
           <catalog-spreads-navigator
             id="spreadsNavigatorComponent"
             image-src="https://raw.githubusercontent.com/akarak/catalogs/refs/heads/gh-pages/assets/data/K3519/stripes/K3519_0001_0077.jpg"
             total-spreads="77"
             class="h-[30px]"
           ></catalog-spreads-navigator>
-
-          <div
-            id="spreadTooltip"
-            class="absolute hidden whitespace-nowrap pointer-events-none z-50"
-          >
-            <span id="spreadNumber" class="text-white/90 font-cambria text-lg"
-              >0</span
-            >
-          </div>
         </section>
 
         <section
