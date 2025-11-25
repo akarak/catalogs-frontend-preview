@@ -30,6 +30,10 @@
     --drop-shadow-image-md: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
     background-color: rgb(88, 88, 99);
 }
