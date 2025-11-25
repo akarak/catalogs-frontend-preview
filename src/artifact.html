@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/output.css" rel="stylesheet" />
     <script src="components/logo-small.js" type="text/javascript"></script>
+    <script src="components/search-form.js" type="text/javascript"></script>
   </head>
   <body>
     <main class="mx-auto grid gap-6 p-6 max-w-[1000px]">
@@ -17,42 +18,7 @@
         </div>
       </section>
       <section>
-        <form id="search-form">
-          <div class="relative">
-            <input
-              type="search"
-              id="search-text"
-              class="block w-full py-2 pl-4 pr-10 text-md bg-white rounded-2xl placeholder:truncate focus:outline-none"
-              placeholder="Поиск выставок, художников, картин, мест проведения"
-              required
-            />
-            <button
-              type="submit"
-              id="search-submit"
-              class="absolute end-2.5 bottom-2.5 px-4 py-2.5"
-            >
-              <div
-                class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none"
-              >
-                <svg
-                  class="w-5 h-5 text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
-            </button>
-          </div>
-        </form>
+        <search-form id="search-component"></search-form>
       </section>
 
       <section class="flex flex-col text-white font-cambria">
@@ -137,18 +103,11 @@
 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function (event) {
-        document
-          .getElementById("search-submit")
-          .addEventListener("click", function () {
-            window.location.href = "search-result.html";
-          });
+        const searchComponent = document.getElementById("search-component");
 
-        document
-          .getElementById("search-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            document.getElementById("search-submit").click();
-          });
+        searchComponent.addEventListener("search", function () {
+          window.location.href = "search-result.html";
+        });
       });
     </script>
   </body>
