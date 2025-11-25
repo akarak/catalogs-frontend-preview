@@ -20,4 +20,6 @@ class LogoIndex extends HTMLElement {
   }
 }
 
-customElements.define('logo-index', LogoIndex);
+if (!customElements.get('logo-index')) {
+  customElements.define('logo-index', LogoIndex);
+}

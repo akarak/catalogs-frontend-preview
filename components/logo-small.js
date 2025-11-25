@@ -25,4 +25,6 @@ class LogoSmall extends HTMLElement {
   }
 }
 
-customElements.define('logo-small', LogoSmall);
+if (!customElements.get('logo-small')) {
+  customElements.define('logo-small', LogoSmall);
+}
