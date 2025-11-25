@@ -643,6 +643,9 @@
   font-style: italic;
   font-display: swap;
 }
+html {
+  scrollbar-gutter: stable;
+}
 body {
   background-color: rgb(88, 88, 99);
 }
