@@ -1,0 +1,984 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: Site.ai
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 1920 px x 1080 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Cambria (TrueType)
+Cambria Italic (OTF)
+Cambria Bold (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 160,466 by 209,042 points 
+Resolution: 231,525 by 234,556 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 152,82 by 215,897 points 
+Resolution: 282,215 by 282,135 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 147,454 by 218,115 points 
+Resolution: 283,696 by 285,867 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 146,292 by 221,936 points 
+Resolution: 280,535 by 286,136 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 153,88 by 218,393 points 
+Resolution: 273,719 by 278,91 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B22-IV  \B22-IV   JPG\B22-IV   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1290K, 554 by 795 pixels
+Dimensions: 159,462 by 221,52 points 
+Resolution: 250,141 by 258,397 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 152,849 by 201,407 points 
+Resolution: 275,565 by 276,694 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 158,506 by 200,73 points 
+Resolution: 245,29 by 249,649 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 151,291 by 207,827 points 
+Resolution: 210,35 by 210,29 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K126- \K126-  JPG\K126-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1498K, 592 by 864 pixels
+Dimensions: 154 by 224,82 points 
+Resolution: 276,779 by 276,701 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 151,649 by 220,643 points 
+Resolution: 276,797 by 276,718 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 157,866 by 212,378 points 
+Resolution: 231,234 by 233,244 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 160,798 by 221,074 points 
+Resolution: 232,839 by 235,468 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1912\K227- \K227-  JPG\K227-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 949K, 478 by 678 pixels
+Dimensions: 191,433 by 271,607 points 
+Resolution: 179,781 by 179,73 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 194,466 by 275,994 points 
+Resolution: 216,593 by 220,701 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K126- \K126-  JPG\K126-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1498K, 592 by 864 pixels
+Dimensions: 194,617 by 284,116 points 
+Resolution: 219,015 by 218,953 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K126- \K126-  JPG\K126-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1498K, 592 by 864 pixels
+Dimensions: 194,617 by 284,116 points 
+Resolution: 219,015 by 218,953 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 186,568 by 275,975 points 
+Resolution: 224,218 by 225,934 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 185,098 by 280,809 points 
+Resolution: 221,72 by 226,146 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B22-IV  \B22-IV   JPG\B22-IV   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1290K, 554 by 795 pixels
+Dimensions: 201,763 by 280,282 points 
+Resolution: 197,698 by 204,223 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 191,424 by 262,957 points 
+Resolution: 166,249 by 166,202 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 202,788 by 264,176 points 
+Resolution: 183,206 by 185,604 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 193,125 by 272,839 points 
+Resolution: 223,316 by 223,253 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 193,163 by 254,527 points 
+Resolution: 218,054 by 218,948 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 200,312 by 253,671 points 
+Resolution: 194,097 by 197,547 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 191,646 by 278,837 points 
+Resolution: 219,029 by 218,967 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 199,502 by 268,392 points 
+Resolution: 182,975 by 184,566 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 203,208 by 279,382 points 
+Resolution: 184,245 by 186,326 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 54,736 by 80,967 points 
+Resolution: 764,246 by 770,094 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 54,305 by 82,385 points 
+Resolution: 755,731 by 770,818 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 56,161 by 77,148 points 
+Resolution: 566,659 by 566,498 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 59,69 by 77,76 points 
+Resolution: 622,412 by 630,559 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 56,846 by 80,309 points 
+Resolution: 758,68 by 758,466 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 57,241 by 81,238 points 
+Resolution: 735,842 by 749,796 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 56,857 by 74,919 points 
+Resolution: 740,805 by 743,839 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 58,961 by 74,668 points 
+Resolution: 659,415 by 671,134 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 58,723 by 79,001 points 
+Resolution: 621,63 by 627,033 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 59,814 by 82,235 points 
+Resolution: 625,942 by 633,012 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 54,736 by 80,967 points 
+Resolution: 764,246 by 770,094 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 54,305 by 82,385 points 
+Resolution: 755,731 by 770,818 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 56,161 by 77,148 points 
+Resolution: 566,659 by 566,498 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 54,736 by 80,967 points 
+Resolution: 764,246 by 770,094 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 54,305 by 82,385 points 
+Resolution: 755,731 by 770,818 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 56,161 by 77,148 points 
+Resolution: 566,659 by 566,498 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 57,241 by 81,238 points 
+Resolution: 735,842 by 749,796 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 56,857 by 74,919 points 
+Resolution: 740,805 by 743,839 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 58,961 by 74,668 points 
+Resolution: 659,415 by 671,134 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 58,723 by 79,001 points 
+Resolution: 621,63 by 627,033 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 59,814 by 82,235 points 
+Resolution: 625,942 by 633,012 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 58,723 by 79,001 points 
+Resolution: 621,63 by 627,033 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 58,723 by 79,001 points 
+Resolution: 621,63 by 627,033 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 59,814 by 82,235 points 
+Resolution: 625,942 by 633,012 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 59,69 by 77,76 points 
+Resolution: 622,412 by 630,559 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 56,846 by 80,309 points 
+Resolution: 758,68 by 758,466 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 57,241 by 81,238 points 
+Resolution: 735,842 by 749,796 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 56,857 by 74,919 points 
+Resolution: 740,805 by 743,839 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 58,961 by 74,668 points 
+Resolution: 659,415 by 671,134 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 54,736 by 80,967 points 
+Resolution: 764,246 by 770,094 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 54,305 by 82,385 points 
+Resolution: 755,731 by 770,818 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 56,161 by 77,148 points 
+Resolution: 566,659 by 566,498 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 59,69 by 77,76 points 
+Resolution: 622,412 by 630,559 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 56,846 by 80,309 points 
+Resolution: 758,68 by 758,466 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 57,241 by 81,238 points 
+Resolution: 735,842 by 749,796 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 56,857 by 74,919 points 
+Resolution: 740,805 by 743,839 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 58,961 by 74,668 points 
+Resolution: 659,415 by 671,134 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 56,411 by 82,075 points 
+Resolution: 744,115 by 743,905 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 58,723 by 79,001 points 
+Resolution: 621,63 by 627,033 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 59,814 by 82,235 points 
+Resolution: 625,942 by 633,012 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1912\K227- \K227-  JPG\K227-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 949K, 478 by 678 pixels
+Dimensions: 85,042 by 117,711 points 
+Resolution: 404,694 by 414,712 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 90,195 by 114,628 points 
+Resolution: 411,906 by 427,748 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 82,881 by 119,604 points 
+Resolution: 504,723 by 521,322 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 82,228 by 121,699 points 
+Resolution: 499,1 by 521,812 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 86,494 by 119,756 points 
+Resolution: 486,973 by 508,634 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B22-IV  \B22-IV   JPG\B22-IV   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1290K, 554 by 795 pixels
+Dimensions: 89,631 by 121,47 points 
+Resolution: 445,025 by 471,226 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 85,914 by 110,441 points 
+Resolution: 490,257 by 504,593 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 89,094 by 110,07 points 
+Resolution: 436,394 by 455,273 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 85,038 by 113,962 points 
+Resolution: 374,233 by 383,496 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K126- \K126-  JPG\K126-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1498K, 592 by 864 pixels
+Dimensions: 86,561 by 123,28 points 
+Resolution: 492,417 by 504,606 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 85,239 by 120,99 points 
+Resolution: 492,448 by 504,638 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 88,734 by 116,458 points 
+Resolution: 411,388 by 425,356 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 90,382 by 121,226 points 
+Resolution: 414,242 by 429,412 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1912\K227- \K227-  JPG\K227-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 949K, 478 by 678 pixels
+Dimensions: 151,298 by 214,663 points 
+Resolution: 227,472 by 227,407 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 160,466 by 209,042 points 
+Resolution: 231,525 by 234,556 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 152,82 by 215,897 points 
+Resolution: 282,215 by 282,135 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 153,88 by 218,393 points 
+Resolution: 273,719 by 278,91 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 152,849 by 201,407 points 
+Resolution: 275,565 by 276,694 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 158,506 by 200,73 points 
+Resolution: 245,29 by 249,649 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B16-  \B16-   JPG\B16-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1029K, 516 by 681 pixels
+Dimensions: 160,466 by 209,042 points 
+Resolution: 231,525 by 234,556 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B17- \B17-  JPG\B17-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1484K, 599 by 846 pixels
+Dimensions: 152,82 by 215,897 points 
+Resolution: 282,215 by 282,135 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B18- \B18-  JPG\B18-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1474K, 581 by 866 pixels
+Dimensions: 147,454 by 218,115 points 
+Resolution: 283,696 by 285,867 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B20- \B20-  JPG\B20-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1472K, 570 by 882 pixels
+Dimensions: 146,292 by 221,936 points 
+Resolution: 280,535 by 286,136 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B21- \B21-  JPG\B21-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1449K, 585 by 846 pixels
+Dimensions: 153,88 by 218,393 points 
+Resolution: 273,719 by 278,91 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B22-IV  \B22-IV   JPG\B22-IV   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1290K, 554 by 795 pixels
+Dimensions: 159,462 by 221,52 points 
+Resolution: 250,141 by 258,397 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B241- \B241-  JPG\B241-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1326K, 585 by 774 pixels
+Dimensions: 152,849 by 201,407 points 
+Resolution: 275,565 by 276,694 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\B438- \B438-  JPG\B438-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 540 by 696 pixels
+Dimensions: 158,506 by 200,73 points 
+Resolution: 245,29 by 249,649 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K51- \K51-  JPG\K51-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 786K, 442 by 607 pixels
+Dimensions: 151,291 by 207,827 points 
+Resolution: 210,35 by 210,29 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K126- \K126-  JPG\K126-  C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1498K, 592 by 864 pixels
+Dimensions: 154 by 224,82 points 
+Resolution: 276,779 by 276,701 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K132-    \K132-     JPG\K132-     C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1448K, 583 by 848 pixels
+Dimensions: 151,649 by 220,643 points 
+Resolution: 276,797 by 276,718 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K214-  \K214-   JPG\K214-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1021K, 507 by 688 pixels
+Dimensions: 157,866 by 212,378 points 
+Resolution: 231,234 by 233,244 pixels per inch
+
+
+Z:\KL-BOOKS\_SCANS\\ 1\1911-1915\1911\K1859-  \K1859-   JPG\K1859-   C1_result.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1101K, 520 by 723 pixels
+Dimensions: 160,798 by 221,074 points 
+Resolution: 232,839 by 235,468 pixels per inch
