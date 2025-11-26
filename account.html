@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/output.css" rel="stylesheet" />
+    <script src="components/logo-small.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <main class="mx-auto grid gap-6 p-6 max-w-[1000px]">
+      <section id="header">
+        <logo-small></logo-small>
+      </section>
+
+      <section id="main" class="flex flex-col text-white font-cambria gap-8">
+        <section>
+          <span class="text-3xl">Личный кабинет пользователя</span>
+        </section>
+
+        <!-- Профиль -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">Профиль</h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-xl mb-3">Пользователь</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Имя пользователя:</span>
+                  <span>Иван Иванов</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Email:</span>
+                  <span>ivan@example.com</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Дата регистрации:</span>
+                  <span>15.03.2024</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl mb-3">Статистика использования</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Дата последнего входа:</span>
+                  <span>25.11.2025</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Количество поисков за всё время:</span>
+                  <span>342</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-400">Количество просмотренных картин:</span>
+                  <span>156</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Текущий доступ -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">Доступ</h2>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-gray-400">Статус:</span>
+                <span class="text-green-400 font-semibold">Активен</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Осталось дней доступа:</span>
+                <span>15 дней</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Дата окончания доступа:</span>
+                <span>10.12.2025</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Продление доступа -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">Продление доступа</h2>
+
+          <div class="grid md:grid-cols-3 gap-4 items-end">
+            <div>
+              <label class="block text-gray-400 mb-2">Количество дней (1-365)</label>
+              <input type="number" min="1" max="365" value="30"
+                     class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <div class="text-gray-400 mb-2">Стоимость</div>
+              <div class="text-xl font-semibold">900 ₽</div>
+            </div>
+            <div>
+              <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+                Оплатить
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- История платежей -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">История платежей</h2>
+
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-700">
+                  <th class="text-left py-3 px-4">Дата оплаты</th>
+                  <th class="text-left py-3 px-4">Количество оплаченных дней</th>
+                  <th class="text-left py-3 px-4">Сумма оплаты</th>
+                  <th class="text-left py-3 px-4">Способ оплаты</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-700">
+                  <td class="py-3 px-4">15.11.2025</td>
+                  <td class="py-3 px-4">30 дней</td>
+                  <td class="py-3 px-4">900 ₽</td>
+                  <td class="py-3 px-4">Банковская карта</td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-3 px-4">01.10.2025</td>
+                  <td class="py-3 px-4">60 дней</td>
+                  <td class="py-3 px-4">1 800 ₽</td>
+                  <td class="py-3 px-4">PayPal</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4">15.08.2025</td>
+                  <td class="py-3 px-4">30 дней</td>
+                  <td class="py-3 px-4">900 ₽</td>
+                  <td class="py-3 px-4">Банковская карта</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Настройки -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">Настройки</h2>
+
+          <div class="space-y-4">
+            <div>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" checked class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500">
+                <span>Email-уведомления об окончании доступа</span>
+              </label>
+            </div>
+
+            <div>
+              <label class="block text-gray-400 mb-2">Язык интерфейса</label>
+              <select class="w-full md:w-auto px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+                <option value="ru" selected>Русский</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Смена пароля -->
+        <section class="bg-gray-800 p-6 rounded-lg">
+          <h2 class="text-2xl mb-4">Смена пароля</h2>
+
+          <div class="space-y-4 max-w-md">
+            <div>
+              <label class="block text-gray-400 mb-2">Текущий пароль</label>
+              <input type="password" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-2">Новый пароль</label>
+              <input type="password" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-gray-400 mb-2">Повтор нового пароля</label>
+              <input type="password" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors">
+              Сохранить
+            </button>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>
