@@ -28,7 +28,9 @@
     --font-cambria: Cambria, sans-serif;
     --drop-shadow-image-xs: 0px 0px 5px rgba(0, 0, 0, 0.3);
     --drop-shadow-image-md: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --color-sectioncontainer: rgba(31, 41, 55, 1);
 }
+
 
 html {
   scrollbar-gutter: stable;
@@ -39,9 +41,13 @@ body {
 }
 
 div.section-divider {
-    @apply block h-0.3 w-full bg-white/80 border-0;
+    @apply block h-[1px] w-full bg-white/80 border-0;
 }
 
 div.sub-section-divider {
-    @apply block h-0.3 w-full bg-white/30 border-0;
+    @apply block h-[0.5px] w-full bg-white/30 border-0;
+}
+
+section.section-container {
+    @apply bg-sectioncontainer p-6 rounded-lg;
 }

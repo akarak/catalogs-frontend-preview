@@ -18,14 +18,10 @@
         </section>
 
         <!-- Профиль -->
-        <section class="bg-gray-800 p-6 rounded-lg">
+        <section class="section-container">
           <div class="space-y-2">
-            <div class="text-3xl font-semibold">
-              Иван Иванов
-            </div>
-            <div class="text-lg">
-              ivan@example.com
-            </div>
+            <div class="text-3xl font-semibold">Иван Иванов</div>
+            <div class="text-lg">ivan@example.com</div>
             <div>
               <span class="text-gray-400">Зарегистрирован</span>
               <span>15.03.2024</span>
@@ -46,7 +42,7 @@
         </section>
 
         <!-- Информация об доступе -->
-        <section class="bg-gray-800 p-6 rounded-lg space-y-8">
+        <section class="section-container space-y-8">
           <!-- Текущий доступ -->
           <div>
             <h2 class="text-2xl mb-4">Доступ</h2>
@@ -67,8 +63,7 @@
                 </div>
               </div>
             </div>
-
-            </div>
+          </div>
 
           <!-- Продление доступа -->
           <div>
@@ -77,14 +72,22 @@
             <div class="flex flex-wrap items-center gap-8">
               <div>
                 <span class="text-gray-400">Количество дней</span>
-                <input type="number" min="1" max="365" value="30" required
-                       class="ml-2 w-24 px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+                <input
+                  type="number"
+                  min="1"
+                  max="365"
+                  value="30"
+                  required
+                  class="ml-2 w-24 px-3 py-2 bg-sectioncontainer border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none"
+                />
               </div>
               <div>
                 <span class="text-gray-400">Стоимость</span>
                 <span class="ml-2 text-xl font-semibold">900 ₽</span>
               </div>
-              <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+              <button
+                class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors"
+              >
                 Оплатить
               </button>
             </div>
@@ -130,36 +133,48 @@
         </section>
 
         <!-- Смена пароля -->
-        <section class="bg-gray-800 p-6 rounded-lg">
+        <section class="section-container">
           <h2 class="text-2xl mb-4">Смена пароля</h2>
 
           <div class="space-y-4 max-w-4xl">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
               <div>
                 <label class="block text-gray-400 mb-2">Текущий пароль</label>
-                <input type="password" maxlength="12" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+                <input
+                  type="password"
+                  maxlength="12"
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none"
+                />
               </div>
               <div class="grid grid-cols-2 gap-4 lg:col-span-2">
                 <div>
                   <label class="block text-gray-400 mb-2">Новый пароль</label>
-                  <input type="password" maxlength="12" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+                  <input
+                    type="password"
+                    maxlength="12"
+                    class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none"
+                  />
                 </div>
                 <div>
-                  <label class="block text-gray-400 mb-2">Повтор нового пароля</label>
-                  <input type="password" maxlength="12" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none">
+                  <label class="block text-gray-400 mb-2"
+                    >Повтор нового пароля</label
+                  >
+                  <input
+                    type="password"
+                    maxlength="12"
+                    class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:border-blue-500 focus:outline-none"
+                  />
                 </div>
               </div>
             </div>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors">
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
+            >
               Сохранить
             </button>
           </div>
         </section>
-
       </section>
     </main>
-
-    <script type="text/javascript">
-    </script>
   </body>
 </html>
