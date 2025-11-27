@@ -37,3 +37,11 @@ html {
 body {
     background-color: rgb(88, 88, 99);
 }
+
+div.section-divider {
+    @apply block h-0.3 w-full bg-white/80 border-0;
+}
+
+div.sub-section-divider {
+    @apply block h-0.3 w-full bg-white/30 border-0;
+}
