@@ -22,7 +22,6 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -52,6 +51,7 @@
     --font-cambria: Cambria, sans-serif;
     --drop-shadow-image-xs: 0px 0px 5px rgba(0, 0, 0, 0.3);
     --drop-shadow-image-md: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --color-sectioncontainer: rgba(31, 41, 55, 1);
   }
 }
 @layer base {
@@ -519,9 +519,6 @@
   .bg-gray-700 {
     background-color: var(--color-gray-700);
   }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
   .bg-green-500\/0 {
     background-color: color-mix(in srgb, oklch(72.3% 0.219 149.579) 0%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -539,6 +536,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-red-500) 0%, transparent);
     }
+  }
+  .bg-sectioncontainer {
+    background-color: var(--color-sectioncontainer);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -799,7 +799,7 @@ body {
 }
 div.section-divider {
   display: block;
-  height: calc(var(--spacing) * 0.5);
+  height: 1px;
   width: 100%;
   border-style: var(--tw-border-style);
   border-width: 0px;
@@ -810,7 +810,7 @@ div.section-divider {
 }
 div.sub-section-divider {
   display: block;
-  height: calc(var(--spacing) * 0.5);
+  height: 0.5px;
   width: 100%;
   border-style: var(--tw-border-style);
   border-width: 0px;
@@ -818,6 +818,11 @@ div.sub-section-divider {
   @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
   }
+}
+section.section-container {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-sectioncontainer);
+  padding: calc(var(--spacing) * 6);
 }
 @property --tw-translate-x {
   syntax: "*";
